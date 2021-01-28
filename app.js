@@ -20,3 +20,8 @@ SERVER.listen(PORT, HOSTNAME, () => {
     console.log(`Server is running at http://${HOSTNAME}:${PORT}`)
 });
 
+const rootController = require('./routes/index');
+const movieController = require('./routes/movies');
+
+app.use('/', rootController);
+app.use('/movies', movieController)
