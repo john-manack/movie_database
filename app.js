@@ -11,7 +11,7 @@ const express = require('express'),
 const app = express();
 
 app.engine('html', es6Renderer);
-app.set('view', 'templates');
+app.set('views', 'templates');
 app.set('view engine', 'html');
 
 const SERVER = HTTP.createServer(app);

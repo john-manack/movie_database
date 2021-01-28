@@ -1,5 +1,5 @@
 'use strict';
-modules.exports = [
+module.exports = [
   {
     "Title": "Avatar",
     "Year": "2009",
