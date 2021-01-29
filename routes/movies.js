@@ -27,14 +27,14 @@ router.get('/:id', (req, res) => {
     if (movie) {
         res.render('template', {
             locals: {
-                title: `${movie.name}`,
+                title: `${movie.Title}`,
                 movie
             },
             partials: {
                 body: 'partials/movie-detail'
             }
         })
-    } else{
+    } else {
         res.status(404).send(`No movie found that matches the ID, ${id}`)
     }
 })
