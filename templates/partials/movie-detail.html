@@ -1,2 +1,22 @@
 <h1>${title}</h1>
 
+<h3>Poster</h3>
+<img style="width: 300px" src=${movie.Poster} alt="${movie.Title} poster">
+
+<h3>Fast Facts</h3>
+<p>Released: ${movie.Year}</p>
+<p>Rating: ${movie.Rated}</p>
+<p>Runtime: ${movie.Runtime}</p>
+<p>Genre: ${movie.Genre}</p>
+<p>Director: ${movie.Director}</p>
+<p>Writer: ${movie.Writer}</p>
+<p>Actors: ${movie.Actors}</p>
+<p>Languages: ${movie.Language}</p>
+<p>Country: ${movie.Country}</p>
+<p>Awards: ${movie.Awards}</p>
+
+<h3>Plot</h3>
+<p>${movie.Plot}</p>
+
+<h3>Photos</h3>
+${movie.Images.map(image => `<img style="width: 40%; padding:2px;" src=${image} alt="${movie.Title} image from movie">`).join('')}
